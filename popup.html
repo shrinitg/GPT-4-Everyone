@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>GPT for Everyone</title>
+
+    <style>
+        #welcome_user {
+            text-align: center;
+        }
+
+        #myBar {
+            width: 10%;
+            height: 30px;
+            background-color: #04AA6D;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: -30px; margin-top: -10px;">
+        <img style="text-align: left; padding-left: 10px;" src="https://assets-global.website-files.com/5ef788f07804fb9e0aa41273/60950e66372af76cf098f036_engati%20logo_color.svg"
+            alt="engati_logo" width="20%" height="20%">
+        <img style="text-align: right; margin-left: 250px;" src="7ccbe7608f704f908e9854cd54c29db7.png"
+            alt="ocean_thunder_logo" width="20%" height="20%">
+    </div>
+
+    <!-- <button id="oauthButton">Authorize with Google</button> -->
+    <div id="select_indexing_type" class="card container mt-3" style="width: 450px;">
+        <div class="card-header">
+            Select Type of Indexing
+        </div>
+        <div class="card-body">
+            <form id="indexingForm">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="indexing_type" id="indexing_type_webpage"
+                        value="webpage" enabled>
+                    <label class="form-check-label" for="indexing_type_webpage">Only this Webpage</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="indexing_type" id="indexing_type_website"
+                        value="website" disabled>
+                    <label class="form-check-label" for="indexing_type_website">All pages in Website</label>
+                    <br>
+                    <p style="font-size: 10px; margin-bottom: -5px;">Note: (Please reach out to contact@oceanthunders.com to enable this feature.) </p>
+                </div>
+                <button type="button" class="btn btn-sm btn-primary mt-3" id="startIndexing">Go!</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="myProgress" style="display: none;">
+        <div id="myBar">0%</div>
+    </div>
+
+    <form id="text_query" style="display: none; margin-top: 20px; text-align: center;">
+        <div class="form-check">
+            <input id="seach_query_text" type="text" class="form-control" placeholder="Please enter your query" style="margin-left: -10px;">
+            <button id="start_search" type="button" class="btn btn-primary mt-3" id="search_call">Search</button>
+        </div>
+    </form>
+
+    <div id="load_for_response" class="d-flex justify-content-center">
+        <div id="load_for_response" class="spinner-border" role="status" style="display: none;">
+        </div>
+    </div>
+
+    <textarea class="form-control" id="show_search_response" rows="5" style="display: none;"></textarea>
+
+    <div style="margin: 0;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
+    <footer>
+        <p style="font-size: 10px; margin-top: 5px;">Copyright@Ocean Thunders</p>
+    </footer>
+</div>
+
+    <script src="popup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

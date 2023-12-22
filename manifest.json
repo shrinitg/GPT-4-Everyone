@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "GPT for Everyone",
+    "version": "1.0.0",
+    "description": "Ask any query from the document",
+    "author": "Shrinit Goyal",
+    "permissions": [
+        "identity", "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "GPT for Everyone"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "oauth2": {
+        "client_id": "95576509340-rp8d80va6hffueor5k9l03elfpubr73r.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/userinfo.profile"
+        ],
+        "redirect_uri": "chrome-extension://ggocjnacmeejocjhkcfcjejeboeeiknd/popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
+}
